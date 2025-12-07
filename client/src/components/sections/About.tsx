@@ -44,7 +44,7 @@ export default function About() {
               </div>
 
               <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                 <p className="text-gray-100 leading-relaxed text-base md:text-lg">
+                 <p className="text-base md:text-lg text-[#ffffff]">
                   My wife Hannah and I share a life built on faith. Our relationship is grounded in the teachings of Jesus Christ, which guide our values of honesty, loyalty, and service. We believe in lifting others and working together to build a meaningful future.
                 </p>
               </div>
