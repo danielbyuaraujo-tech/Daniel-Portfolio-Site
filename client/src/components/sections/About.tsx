@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import coupleImage from "@assets/DSC00599_1765073068037.jpg";
 import byuLogo from "@assets/image_1765076273308.png";
 
 export default function About() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section id="about" className="py-24 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -26,27 +30,41 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-zinc-900 shadow-xl min-h-[500px]"
+            className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-zinc-900 shadow-xl min-h-[500px] cursor-pointer md:cursor-default"
+            onClick={() => setIsExpanded(!isExpanded)}
           >
             <img 
               src={coupleImage} 
               alt="Daniel and his wife Hannah" 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
             />
             
-            {/* Dark Gradient Overlay for Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
+            {/* Dark Gradient Overlay - Darkens significantly on hover/expand for readability */}
+            <div className={`absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30 transition-opacity duration-500 ${isExpanded ? 'opacity-100' : 'opacity-60 md:group-hover:opacity-100'}`} />
             
             <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between text-white z-10">
-              <div className="w-full">
-                 <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-md">My Foundation</h3>
-                 <p className="text-white/90 text-lg font-medium drop-shadow-sm">Family & Faith</p>
+              <div className="w-full flex justify-between items-start">
+                 <div>
+                    <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-md">My Foundation</h3>
+                    <p className="text-white/90 text-lg font-medium drop-shadow-sm">Family & Faith</p>
+                 </div>
+                 
+                 {/* Mobile Toggle Icon */}
+                 <div className="md:hidden p-2 bg-white/10 backdrop-blur-md rounded-full">
+                    {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                 </div>
               </div>
 
-              <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                 <p className="text-base md:text-lg text-[#ffffff]">
-                  My wife Hannah and I share a life built on faith. Our relationship is grounded in the teachings of Jesus Christ, which guide our values of honesty, loyalty, and service. We believe in lifting others and working together to build a meaningful future.
-                </p>
+              <div className={`
+                 transition-all duration-500 ease-in-out
+                 md:transform md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100
+                 ${isExpanded ? 'opacity-100 translate-y-0 max-h-96' : 'opacity-0 translate-y-4 max-h-0 md:max-h-none'}
+              `}>
+                 <div className="bg-black/40 backdrop-blur-sm p-6 rounded-2xl border border-white/10 md:bg-transparent md:backdrop-blur-none md:p-0 md:border-none">
+                    <p className="text-gray-100 leading-relaxed text-base md:text-lg">
+                      My wife Hannah and I share a life built on faith. Our relationship is grounded in the teachings of Jesus Christ, which guide our values of honesty, loyalty, and service. We believe in lifting others and working together to build a meaningful future.
+                    </p>
+                 </div>
               </div>
             </div>
           </motion.div>
