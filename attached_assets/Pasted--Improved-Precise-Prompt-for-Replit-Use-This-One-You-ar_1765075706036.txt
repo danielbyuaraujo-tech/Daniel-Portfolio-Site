@@ -1,0 +1,170 @@
+⭐ Improved, Precise Prompt for Replit (Use This One)
+
+You are updating the personal website for Daniel Araujo.
+Make the following changes exactly as specified:
+
+1. Profile Picture (Hero Section)
+
+Increase the size of the circular profile image.
+
+Zoom the picture slightly so Daniel’s face occupies more of the circle.
+
+Ensure image quality stays crisp.
+
+Keep the layout balanced on desktop and mobile.
+
+2. "My Foundation" Card (Photo of Daniel & Hannah)
+
+Improve this card in three ways:
+
+A. Text Contrast
+
+Increase contrast so the title and text are easy to read over the background image.
+
+You may use:
+
+A dark gradient overlay
+
+A semi-transparent dark panel behind the text
+
+Cleaner font color (white or light tones)
+
+B. Content Rewrite (50 Words)
+
+Replace the body text with a short paragraph focused on:
+
+Daniel’s relationship with Hannah, his wife
+
+His faith and religion
+
+How both shape his values and character
+
+Keep the tone humble, sincere, not flashy
+
+(You must write the new ~50-word paragraph.)
+
+C. Improve visual polish
+
+Make the layout feel warmer and more personal without distracting effects.
+
+3. Tone Adjustments Across the Site
+
+Remove or rewrite anything that sounds overconfident or exaggerated.
+
+Avoid phrases like:
+
+“Building the future with purpose”
+
+“Visionary”
+
+“I build solutions”
+
+Replace with grounded, humble, professional descriptions.
+
+Tone target:
+
+Honest
+
+Hard-working
+
+Down-to-earth
+
+Focused on learning, service, growth
+
+No bragging
+
+4. Gallup Strengths Section
+
+Improve layout and visual balance.
+
+Requirements:
+
+Display official Gallup CliftonStrengths logos or badges (use license-free versions if available).
+
+Align the strengths cleanly in a grid or two-column layout so spacing is even on desktop and mobile.
+
+Typography should match the branding tone used by Gallup (clean, straightforward).
+
+5. BYU Branding
+
+Add official BYU branding elements:
+
+Use an official BYU logo (find a license-free SVG/PNG version such as the BYU wordmark).
+
+Place it in the Education section and anywhere else appropriate.
+
+Keep it subtle and professional.
+
+6. Themes App Section
+
+Update this section so it visually matches the real Themes app vibe.
+
+Requirements:
+
+Use the actual Themes app icon as the main graphic.
+
+Adjust colors to match the app’s palette (same gradient, tones, or minimalist style used in the app UI).
+
+Clean, modern, soft design.
+
+A short description focused on:
+
+What the app does
+
+Why Daniel created it
+
+Keep tone humble (not “visionary”).
+
+7. Professional Timeline Section (Dynamic Earth Background)
+
+Transform the timeline section into a more modern, immersive experience:
+
+Visual Requirements
+
+Replace the current background with a dark, dynamic Earth globe animation.
+
+As the user scrolls down the timeline:
+
+The globe moves/rotates
+
+It zooms in slightly on the geographic region where the job occurred
+
+Example: Brazil → Utah → Florida → etc.
+
+A subtle Google-Earth-from-space aesthetic
+
+Should not distract from the text, but enhance context.
+
+Technical Guidance
+
+You may use:
+
+A lightweight JavaScript globe library (e.g. three.js, three-globe, EarthJS)
+
+Or a looping video background if performance is an issue
+
+Keep performance high: smooth scrolling, no lag
+
+8. Ask Before Assuming
+
+If any image assets are needed (e.g., Themes app logo, BYU logo, Gallup badge), ask me to upload them or provide links.
+
+9. Overall Style Consistency
+
+Make sure:
+
+All pages stay consistent in typography, spacing, and palette.
+
+The profile image sizing changes do not break mobile layout.
+
+The tone throughout is humble, balanced, and professional.
+
+✔️ End Product Requirements
+
+After applying all updates, output:
+
+Full updated HTML/CSS/JS code for all modified sections
+
+Clear comments explaining where changes were made
+
+Instructions if additional assets are required
