@@ -79,7 +79,7 @@ export default function Experience() {
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.1, 0.8, 1],
       glowColor: [1, 1, 1],
-      markers: experience.map(e => ({ location: e.coords as [number, number], size: 0.05 })),
+      markers: experience.map(e => ({ location: e.coords as [number, number], size: 0.08 })), // Increased size slightly for visibility
       onRender: (state) => {
         // This prevents rotation while dragging
         if (!pointerInteracting.current) {
@@ -113,8 +113,8 @@ export default function Experience() {
              />
           </div>
 
-          {/* Timeline */}
-          <div className="order-1 lg:order-2 space-y-8 max-h-[600px] overflow-y-auto pr-4 scrollbar-hide">
+          {/* Timeline - Removed Scroll Container */}
+          <div className="order-1 lg:order-2 space-y-8">
             {experience.map((item, index) => (
               <motion.div 
                 key={index}

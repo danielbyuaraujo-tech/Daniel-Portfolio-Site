@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import coupleImage from "@assets/DSC00599_1765073068037.jpg";
+import byuLogo from "@assets/image_1765076273308.png";
 
 export default function About() {
   return (
@@ -25,7 +26,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-zinc-900 shadow-xl aspect-[4/5] md:aspect-auto md:h-full min-h-[500px]"
+            className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-zinc-900 shadow-xl min-h-[500px]"
           >
             <img 
               src={coupleImage} 
@@ -34,14 +35,19 @@ export default function About() {
             />
             
             {/* Dark Gradient Overlay for Contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
             
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 text-white z-10">
-              <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">My Foundation</h3>
-              <p className="text-white/90 text-lg font-medium mb-4">Family & Faith</p>
-              <p className="text-gray-200 leading-relaxed text-base md:text-lg">
-                My wife Hannah and I share a life built on faith. Our relationship is grounded in the teachings of Jesus Christ, which guide our values of honesty, loyalty, and service. We believe in lifting others and working together to build a meaningful future.
-              </p>
+            <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between text-white z-10">
+              <div className="w-full">
+                 <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-md">My Foundation</h3>
+                 <p className="text-white/90 text-lg font-medium drop-shadow-sm">Family & Faith</p>
+              </div>
+
+              <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                 <p className="text-gray-100 leading-relaxed text-base md:text-lg">
+                  My wife Hannah and I share a life built on faith. Our relationship is grounded in the teachings of Jesus Christ, which guide our values of honesty, loyalty, and service. We believe in lifting others and working together to build a meaningful future.
+                </p>
+              </div>
             </div>
           </motion.div>
 
@@ -55,9 +61,9 @@ export default function About() {
           >
              <div className="bg-white dark:bg-zinc-900 rounded-[2rem] p-8 md:p-10 shadow-lg border border-border/50 h-full flex flex-col justify-between relative overflow-hidden">
                 {/* BYU Branding */}
-                <div className="absolute top-8 right-8 w-24 md:w-32 opacity-80">
+                <div className="absolute top-8 right-8 w-20 md:w-24 opacity-100">
                   <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/2/28/Brigham_Young_University_logo.svg" 
+                    src={byuLogo} 
                     alt="BYU Logo" 
                     className="w-full h-auto"
                   />
