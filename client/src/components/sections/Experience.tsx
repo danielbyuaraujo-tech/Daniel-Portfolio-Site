@@ -99,7 +99,7 @@ export default function Experience() {
   return (
     <section className="py-24 bg-black text-white relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">Global Experience</h2>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">Work Experience</h2>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
