@@ -245,7 +245,7 @@ export default function Strengths() {
               <div>
                 <div className="flex justify-between items-start mb-4 mt-1">
                    <h3 className="text-2xl font-bold">{strength.name}</h3>
-                   <span className={`text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-full ${strength.pillColor} ${strength.textColor}`}>
+                   <span className="text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 pt-[5px] pb-[5px] mt-[4px] mb-[4px]">
                       {strength.domain}
                    </span>
                 </div>
