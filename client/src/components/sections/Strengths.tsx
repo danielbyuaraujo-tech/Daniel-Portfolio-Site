@@ -197,7 +197,7 @@ export default function Strengths() {
                     className="flex items-center gap-3 bg-card border border-border shadow-md rounded-full px-6 py-2"
                   >
                     <span className={`w-3 h-3 rounded-full ${domainInfo[activeDomain].color}`}></span>
-                    <span className="font-bold text-foreground text-sm md:text-base">{activeDomain}</span>
+                    <span className="font-bold text-foreground md:text-base text-[12px]">{activeDomain}</span>
                     <span className="hidden md:inline text-muted-foreground mx-1">•</span>
                     <p className="hidden md:block text-sm text-muted-foreground max-w-md truncate">{domainInfo[activeDomain].description}</p>
                   </motion.div>
