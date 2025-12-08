@@ -39,7 +39,8 @@ export default function Hero() {
             Daniel Araujo
           </h1>
           
-          <p className="md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance md:text-center text-[17px] text-center pl-[0px] pr-[0px] ml-[8px] mr-[8px]">I’m a student, a husband, and a lifelong learner from Brazil. My faith, family shape the way I try to live—honestly, consistently, and with a desire to serve. BYU has become a place where I’m growing, studying, and building a future we’re excited for.</p>
+          <p className="md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance md:text-center text-center pl-[0px] pr-[0px] ml-[8px] mr-[8px] text-[16px]">From Brazil to BYU 
+          Growing Through Faith, Family, and Work</p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
