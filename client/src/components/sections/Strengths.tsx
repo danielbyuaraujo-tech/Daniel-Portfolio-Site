@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, PlayCircle, ExternalLink } from "lucide-react";
+import { PlayCircle } from "lucide-react";
 import gallupLogo from "@assets/image_1765076314436.png";
 
 type DomainType = "Executing" | "Influencing" | "Relationship Building" | "Strategic Thinking";
@@ -73,7 +73,7 @@ const domainInfo: Record<DomainType, { color: string, description: string }> = {
 
 export default function Strengths() {
   const [activeDomain, setActiveDomain] = useState<DomainType | null>(null);
-  const [activeStrength, setActiveStrength] = useState<Strength | null>(null);
+  const [, setActiveStrength] = useState<Strength | null>(null);
 
   return (
     <section className="py-24 bg-background">
@@ -121,10 +121,11 @@ export default function Strengths() {
                           ${i % 2 === 0 ? "h-16 md:h-20 translate-y-2" : "h-24 md:h-28 -translate-y-2"}`} 
                       />
                   ))}
-                  {/* Connector lines visual trick */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
-                     <div className="w-full h-0.5 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300 blur-[1px]"></div>
-                  </div>
+                  {/* Improved Connector lines - subtle helix suggestion */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-400" />
+                      <path d="M0,50 Q25,80 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-400" />
+                  </svg>
               </div>
 
               {/* Influencing (Orange) */}
@@ -141,9 +142,10 @@ export default function Strengths() {
                           ${i % 2 === 0 ? "h-20 md:h-24 -translate-y-1" : "h-12 md:h-16 translate-y-1"}`} 
                       />
                   ))}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
-                     <div className="w-full h-0.5 bg-gradient-to-r from-orange-300 via-orange-400 to-orange-300 blur-[1px]"></div>
-                  </div>
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-orange-400" />
+                      <path d="M0,50 Q25,80 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-orange-400" />
+                  </svg>
               </div>
 
               {/* Relationship Building (Blue) */}
@@ -160,9 +162,10 @@ export default function Strengths() {
                           ${i % 2 === 0 ? "h-20 md:h-24 translate-y-3" : "h-14 md:h-18 -translate-y-3"}`} 
                       />
                   ))}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
-                     <div className="w-full h-0.5 bg-gradient-to-r from-blue-300 via-blue-400 to-blue-300 blur-[1px]"></div>
-                  </div>
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-400" />
+                      <path d="M0,50 Q25,80 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-400" />
+                  </svg>
               </div>
 
               {/* Strategic Thinking (Green) */}
@@ -179,14 +182,15 @@ export default function Strengths() {
                           ${i % 2 === 0 ? "h-24 md:h-28 -translate-y-2" : "h-16 md:h-20 translate-y-2"}`} 
                       />
                   ))}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
-                     <div className="w-full h-0.5 bg-gradient-to-r from-green-300 via-green-400 to-green-300 blur-[1px]"></div>
-                  </div>
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-green-400" />
+                      <path d="M0,50 Q25,80 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-green-400" />
+                  </svg>
               </div>
            </div>
 
-           {/* Domain Info Box - Improved positioning */}
-           <div className="h-20 flex justify-center items-center mt-6 px-4">
+           {/* Domain Info Box - Improved positioning and text display */}
+           <div className="h-24 md:h-20 flex justify-center items-center mt-6 px-4">
               <AnimatePresence mode="wait">
                 {activeDomain ? (
                   <motion.div 
@@ -194,12 +198,14 @@ export default function Strengths() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="flex items-center gap-3 bg-card border border-border shadow-md rounded-full px-6 py-2"
+                    className="flex flex-col md:flex-row items-center gap-2 md:gap-4 bg-card border border-border shadow-md rounded-2xl px-6 py-3 md:py-2 text-center md:text-left max-w-2xl w-full"
                   >
-                    <span className={`w-3 h-3 rounded-full ${domainInfo[activeDomain].color}`}></span>
-                    <span className="font-bold text-foreground md:text-base text-[12px]">{activeDomain}</span>
-                    <span className="hidden md:inline text-muted-foreground mx-1">•</span>
-                    <p className="hidden md:block text-sm text-muted-foreground max-w-md truncate">{domainInfo[activeDomain].description}</p>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <span className={`w-3 h-3 rounded-full ${domainInfo[activeDomain].color}`}></span>
+                        <span className="font-bold text-foreground text-sm md:text-base">{activeDomain}</span>
+                    </div>
+                    <span className="hidden md:inline text-muted-foreground">•</span>
+                    <p className="text-sm text-muted-foreground leading-snug">{domainInfo[activeDomain].description}</p>
                   </motion.div>
                 ) : (
                   <motion.p 
