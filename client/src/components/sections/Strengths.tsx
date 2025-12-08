@@ -76,19 +76,20 @@ export default function Strengths() {
   const [, setActiveStrength] = useState<Strength | null>(null);
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-16 text-center">
+        <div className="flex flex-col items-center mb-10 text-center">
           <a 
             href="https://www.gallup.com/cliftonstrengths/en/253676/how-cliftonstrengths-works.aspx" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
           >
-            <img src={gallupLogo} alt="Gallup Logo" className="h-12 md:h-16 mb-8 opacity-90" />
+            <img src={gallupLogo} alt="Gallup Logo" className="h-10 md:h-12 mb-6 opacity-90" />
           </a>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-balance">CliftonStrengths® Top 5</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl text-balance mb-8">
+          <h2 className="text-xl font-medium text-muted-foreground uppercase tracking-widest mb-2">What are my Strengths?</h2>
+          <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-balance">CliftonStrengths® Top 5</h3>
+          <p className="text-muted-foreground text-lg max-w-2xl text-balance mb-6">
             My natural patterns of thinking, feeling, and behaving.
           </p>
           
@@ -204,7 +205,6 @@ export default function Strengths() {
                         <span className={`w-3 h-3 rounded-full ${domainInfo[activeDomain].color}`}></span>
                         <span className="font-bold text-foreground text-sm md:text-base">{activeDomain}</span>
                     </div>
-                    {/* Removed Bullet Point */}
                     <p className="text-sm text-muted-foreground leading-snug">{domainInfo[activeDomain].description}</p>
                   </motion.div>
                 ) : (
@@ -246,7 +246,6 @@ export default function Strengths() {
               <div>
                 <div className="flex justify-between items-start mb-4 mt-1">
                    <h3 className="text-2xl font-bold">{strength.name}</h3>
-                   {/* Correct Pill Colors */}
                    <span className={`text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-full ${strength.pillColor} ${strength.textColor}`}>
                       {strength.domain}
                    </span>
