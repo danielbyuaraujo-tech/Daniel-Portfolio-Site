@@ -38,7 +38,7 @@ export default function Projects() {
                 </div>
               </div>
               
-              <p className="text-foreground/80 text-lg leading-relaxed mb-8">
+              <p className="text-foreground/80 text-lg leading-relaxed mb-8 text-justify">
                 I created Themes to help myself and other BYU students study more effectively. It uses AI to organize course materials and generate personalized insights, making it easier to master complex subjects.
               </p>
               

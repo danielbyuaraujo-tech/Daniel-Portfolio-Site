@@ -39,7 +39,7 @@ export default function Hero() {
             Daniel Araujo
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-balance">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-balance text-justify md:text-center">
             A Pre-Business student at BYU driven by curiosity and a desire to serve. 
             Focused on learning, growing, and doing good work.
           </p>

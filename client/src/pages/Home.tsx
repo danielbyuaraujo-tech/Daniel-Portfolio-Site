@@ -24,11 +24,27 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-border/50 h-14 flex items-center">
          <div className="container mx-auto px-4 flex justify-between items-center">
             <span className="font-bold tracking-tight text-lg">DA</span>
-            <div className="hidden md:flex gap-6 text-sm font-medium text-muted-foreground">
+            
+            <div className="hidden md:flex gap-6 text-sm font-medium text-muted-foreground items-center">
                <a href="#" className="hover:text-foreground transition-colors">Home</a>
                <a href="#about" className="hover:text-foreground transition-colors">About</a>
                <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
-               <a href="mailto:arauj0@byu.edu" className="px-4 py-1.5 rounded-full bg-foreground text-background hover:opacity-90 transition-opacity">Contact</a>
+               <a 
+                href="mailto:arauj0@byu.edu" 
+                className="px-4 py-1.5 rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
+               >
+                Contact
+               </a>
+            </div>
+
+            {/* Mobile Contact Button - Simplified for better alignment */}
+            <div className="md:hidden">
+               <a 
+                href="mailto:arauj0@byu.edu" 
+                className="px-4 py-1.5 rounded-full bg-foreground text-background hover:opacity-90 transition-opacity text-sm font-medium"
+               >
+                Contact
+               </a>
             </div>
          </div>
       </nav>
@@ -48,7 +64,7 @@ export default function Home() {
           <p className="mb-4">&copy; {new Date().getFullYear()} Daniel Araujo. All rights reserved.</p>
           <div className="flex justify-center gap-6 text-sm">
             <a href="mailto:arauj0@byu.edu" className="hover:text-foreground transition-colors">arauj0@byu.edu</a>
-            <a href="#" className="hover:text-foreground transition-colors">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/daniel-e-araujo/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-foreground transition-colors">GitHub</a>
           </div>
         </div>

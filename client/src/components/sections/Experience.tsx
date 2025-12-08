@@ -79,12 +79,9 @@ export default function Experience() {
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.1, 0.8, 1],
       glowColor: [1, 1, 1],
-      markers: experience.map(e => ({ location: e.coords as [number, number], size: 0.08 })), // Increased size slightly for visibility
+      markers: experience.map(e => ({ location: e.coords as [number, number], size: 0.08 })),
       onRender: (state) => {
-        // This prevents rotation while dragging
         if (!pointerInteracting.current) {
-          // Called on every animation frame.
-          // `state` will be an empty object, return updated params.
           phi += 0.005;
         } 
         state.phi = phi + r.get();
@@ -99,7 +96,7 @@ export default function Experience() {
   return (
     <section className="py-24 bg-black text-white relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">Work Experience</h2>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-16 text-center">Global Experience</h2>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
@@ -113,7 +110,7 @@ export default function Experience() {
              />
           </div>
 
-          {/* Timeline - Removed Scroll Container */}
+          {/* Timeline - No container scrolling */}
           <div className="order-1 lg:order-2 space-y-8">
             {experience.map((item, index) => (
               <motion.div 
@@ -123,9 +120,6 @@ export default function Experience() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative pl-8 border-l border-white/20 hover:border-blue-500/50 transition-colors group"
-                onMouseEnter={() => {
-                   // Optional: We could trigger globe rotation here if we wanted to get fancy with state
-                }}
               >
                 <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-white group-hover:bg-blue-400 transition-colors" />
                 
@@ -137,7 +131,7 @@ export default function Experience() {
                     <span>•</span>
                     <span className="font-mono">{item.date}</span>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm text-justify">
                   {item.description}
                 </p>
               </motion.div>
