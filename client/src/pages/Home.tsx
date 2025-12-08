@@ -66,7 +66,6 @@ export default function Home() {
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
         style={{ scaleX }}
       />
-      
       <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-md border-b border-border/50 h-14 flex items-center">
          <div className="container mx-auto px-4 flex justify-between items-center">
             <span className="font-bold tracking-tight text-lg">DA</span>
@@ -84,7 +83,6 @@ export default function Home() {
             </div>
          </div>
       </nav>
-
       <main>
         <Hero />
         <About />
@@ -105,9 +103,7 @@ export default function Home() {
                className="max-w-2xl mx-auto"
              >
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Let's Connect</h2>
-                <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-balance">
-                   I'm always open to discussing new opportunities, collaborations, or just connecting with like-minded individuals.
-                </p>
+                <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-balance">I'm always open to discussing new opportunities, collaborations, or just connecting with people.</p>
                 
                 <ContactButton className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background text-lg font-medium hover:opacity-90 transition-all hover:scale-105 shadow-lg">
                    <span>Get in Touch</span>
@@ -117,7 +113,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
       <footer className="py-12 border-t border-border/50 text-center text-muted-foreground bg-secondary/20">
         <div className="container mx-auto px-4">
           <p className="mb-4">&copy; {new Date().getFullYear()} Daniel Araujo. All rights reserved.</p>
