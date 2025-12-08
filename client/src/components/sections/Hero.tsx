@@ -33,7 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
             className="text-sm md:text-base font-medium tracking-widest uppercase text-muted-foreground mb-4 block"
-          >Get to Know me</motion.span>
+          >Resume</motion.span>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 apple-gradient-text text-balance">
             Daniel Araujo
