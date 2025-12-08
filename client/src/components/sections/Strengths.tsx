@@ -87,7 +87,6 @@ export default function Strengths() {
           >
             <img src={gallupLogo} alt="Gallup Logo" className="h-10 md:h-12 mb-6 opacity-90" />
           </a>
-          <h2 className="text-xl font-medium text-muted-foreground uppercase tracking-widest mb-2">What are my Strengths?</h2>
           <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-balance">CliftonStrengths® Top 5</h3>
           <p className="text-muted-foreground text-lg max-w-2xl text-balance mb-6">
             My natural patterns of thinking, feeling, and behaving.
