@@ -250,7 +250,7 @@ export default function Strengths() {
                    </span>
                 </div>
                 
-                <p className="text-muted-foreground text-sm md:text-base text-left">
+                <p className="text-muted-foreground md:text-base text-left text-[16px] pt-[10px] pb-[10px]">
                   {strength.description}
                 </p>
               </div>
