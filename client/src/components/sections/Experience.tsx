@@ -131,7 +131,7 @@ export default function Experience() {
                     <span>•</span>
                     <span className="font-mono">{item.date}</span>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-sm text-justify">
+                <p className="text-gray-300 text-sm text-left">
                   {item.description}
                 </p>
               </motion.div>
