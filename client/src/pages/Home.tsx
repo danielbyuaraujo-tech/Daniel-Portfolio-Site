@@ -5,7 +5,7 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -15,11 +15,11 @@ export default function Home() {
     restDelta: 0.001
   });
 
-  const ContactButton = ({ className }: { className?: string }) => (
+  const ContactButton = ({ className, children }: { className?: string, children?: React.ReactNode }) => (
     <Dialog>
       <DialogTrigger asChild>
         <button className={className}>
-          Contact
+          {children || "Contact"}
         </button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
@@ -93,9 +93,32 @@ export default function Home() {
         <div id="experience">
             <Experience />
         </div>
+        
+        {/* Aesthetic Contact Section */}
+        <section className="py-24 md:py-32 bg-background border-t border-border/30">
+          <div className="container mx-auto px-4 text-center">
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.8 }}
+               className="max-w-2xl mx-auto"
+             >
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Let's Connect</h2>
+                <p className="text-lg text-muted-foreground mb-10 leading-relaxed text-balance">
+                   I'm always open to discussing new opportunities, collaborations, or just connecting with like-minded individuals.
+                </p>
+                
+                <ContactButton className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background text-lg font-medium hover:opacity-90 transition-all hover:scale-105 shadow-lg">
+                   <span>Get in Touch</span>
+                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </ContactButton>
+             </motion.div>
+          </div>
+        </section>
       </main>
 
-      <footer className="py-12 border-t border-border/50 text-center text-muted-foreground">
+      <footer className="py-12 border-t border-border/50 text-center text-muted-foreground bg-secondary/20">
         <div className="container mx-auto px-4">
           <p className="mb-4">&copy; {new Date().getFullYear()} Daniel Araujo. All rights reserved.</p>
           <div className="flex justify-center gap-6 text-sm">
