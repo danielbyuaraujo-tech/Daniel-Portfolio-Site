@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import portraitImage from "@assets/DSC00441_1765073175127.jpg";
 
+import IMG_8084 from "@assets/IMG_8084.JPG";
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-20 pb-10">
@@ -16,7 +18,7 @@ export default function Hero() {
         >
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white dark:border-zinc-800 shadow-2xl">
             <img 
-              src={portraitImage} 
+              src={IMG_8084} 
               alt="Daniel Araujo" 
               className="w-full h-full object-cover scale-110" 
             />
