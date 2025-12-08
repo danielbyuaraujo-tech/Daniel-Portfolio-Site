@@ -96,7 +96,7 @@ export default function Strengths() {
             href="https://youtu.be/M9R1uZ4MTWU" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors font-medium text-sm group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors font-medium group text-[12px] pl-[15px] pr-[15px] pt-[14px] pb-[14px]"
           >
             <PlayCircle size={18} className="text-primary group-hover:scale-110 transition-transform" />
             Learn How the CliftonStrengths Assessment Works
