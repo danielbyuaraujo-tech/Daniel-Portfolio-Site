@@ -24,7 +24,7 @@ export default function Home() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-center text-xl mb-4">Get in Touch</DialogTitle>
+          <DialogTitle className="tracking-tight text-center mb-4 font-bold text-[23px]">Get in Touch</DialogTitle>
         </DialogHeader>
         <div className="grid grid-cols-1 gap-4 py-4">
           <a
