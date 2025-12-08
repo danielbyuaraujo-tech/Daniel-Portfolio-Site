@@ -5,7 +5,6 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-20 pb-10">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-50 via-background to-background dark:from-gray-900/50 dark:via-background dark:to-background opacity-70" />
-      
       <div className="container mx-auto px-4 flex flex-col items-center text-center z-10">
         
         {/* Profile Picture - Large & Centered */}
@@ -34,9 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
             className="text-sm md:text-base font-medium tracking-widest uppercase text-muted-foreground mb-4 block"
-          >
-            Portfolio & Resume
-          </motion.span>
+          >Get to Know me</motion.span>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 apple-gradient-text text-balance">
             Daniel Araujo
@@ -62,7 +59,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
