@@ -37,14 +37,17 @@ export default function About() {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
             />
             
-            {/* Dark Gradient Overlay - Only visible on hover/expand */}
-            <div className={`absolute inset-0 bg-black/80 transition-opacity duration-500 ${isExpanded ? 'opacity-90' : 'opacity-0 md:group-hover:opacity-90'}`} />
+            {/* Permanent Top Gradient - Ensures Title Visibility */}
+            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/70 to-transparent z-10" />
+
+            {/* Full Dark Overlay - Only visible on hover/expand */}
+            <div className={`absolute inset-0 bg-black/80 transition-opacity duration-500 z-10 ${isExpanded ? 'opacity-90' : 'opacity-0 md:group-hover:opacity-90'}`} />
             
-            <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between z-10">
+            <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between z-20">
               <div className="w-full flex justify-between items-start">
                  <div>
-                    {/* Text hidden initially, shows on hover/expand */}
-                    <div className={`transition-opacity duration-300 ${isExpanded ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'}`}>
+                    {/* Text always visible now */}
+                    <div className="transition-opacity duration-300 opacity-100">
                         <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-md">My Foundation</h3>
                         <p className="text-white/90 text-lg font-medium drop-shadow-sm">Family & Faith</p>
                     </div>
