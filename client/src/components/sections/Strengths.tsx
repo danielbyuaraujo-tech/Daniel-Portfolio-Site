@@ -103,7 +103,7 @@ export default function Strengths() {
           </a>
         </div>
 
-        {/* DNA Visualization - Improved alignment and structure */}
+        {/* DNA Visualization */}
         <div className="mb-20">
            <div className="relative flex justify-center items-center h-32 md:h-40 gap-0 max-w-5xl mx-auto px-4 overflow-visible">
               
@@ -121,7 +121,7 @@ export default function Strengths() {
                           ${i % 2 === 0 ? "h-16 md:h-20 translate-y-2" : "h-24 md:h-28 -translate-y-2"}`} 
                       />
                   ))}
-                  {/* Improved Connector lines - subtle helix suggestion */}
+                  {/* Connector lines - Helix */}
                   <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
                       <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-400" />
                       <path d="M0,50 Q25,80 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-400" />
@@ -189,7 +189,7 @@ export default function Strengths() {
               </div>
            </div>
 
-           {/* Domain Info Box - Improved positioning and text display */}
+           {/* Domain Info Box - Removed Bullet Point */}
            <div className="h-24 md:h-20 flex justify-center items-center mt-6 px-4">
               <AnimatePresence mode="wait">
                 {activeDomain ? (
@@ -204,7 +204,7 @@ export default function Strengths() {
                         <span className={`w-3 h-3 rounded-full ${domainInfo[activeDomain].color}`}></span>
                         <span className="font-bold text-foreground text-sm md:text-base">{activeDomain}</span>
                     </div>
-                    <span className="hidden md:inline text-muted-foreground">•</span>
+                    {/* Removed Bullet Point */}
                     <p className="text-sm text-muted-foreground leading-snug">{domainInfo[activeDomain].description}</p>
                   </motion.div>
                 ) : (
@@ -237,7 +237,8 @@ export default function Strengths() {
                 setActiveStrength(null);
                 setActiveDomain(null);
               }}
-              className="group relative p-8 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between min-h-[220px] ring-2 ring-offset-2 ring-gray-200 dark:ring-gray-800 transform -translate-y-1 pt-[52px] pb-[52px] pl-[32px] pr-[32px]"
+              className={`group relative p-8 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between min-h-[240px] md:min-h-[220px]
+                ${activeDomain === strength.domain ? 'ring-2 ring-offset-2 ring-gray-200 dark:ring-gray-800 transform -translate-y-1' : ''}`}
             >
               {/* Colored Bar Top */}
               <div className={`absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl ${strength.barColor}`} />
@@ -245,7 +246,8 @@ export default function Strengths() {
               <div>
                 <div className="flex justify-between items-start mb-4 mt-1">
                    <h3 className="text-2xl font-bold">{strength.name}</h3>
-                   <span className="text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 pt-[5px] pb-[5px] mt-[4px] mb-[4px]">
+                   {/* Correct Pill Colors */}
+                   <span className={`text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-full ${strength.pillColor} ${strength.textColor}`}>
                       {strength.domain}
                    </span>
                 </div>
