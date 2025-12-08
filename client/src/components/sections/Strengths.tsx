@@ -237,8 +237,7 @@ export default function Strengths() {
                 setActiveStrength(null);
                 setActiveDomain(null);
               }}
-              className={`group relative p-8 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between min-h-[220px]
-                ${activeDomain === strength.domain ? 'ring-2 ring-offset-2 ring-gray-200 dark:ring-gray-800 transform -translate-y-1' : ''}`}
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between min-h-[220px] ring-2 ring-offset-2 ring-gray-200 dark:ring-gray-800 transform -translate-y-1 pt-[52px] pb-[52px] pl-[32px] pr-[32px]"
             >
               {/* Colored Bar Top */}
               <div className={`absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl ${strength.barColor}`} />
