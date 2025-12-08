@@ -18,9 +18,7 @@ export default function About() {
           className="max-w-3xl mx-auto text-center mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Who I Am</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed text-justify md:text-center text-balance">
-            I am a student, a husband, and a lifelong learner. My journey is defined by the people I meet and the principles I hold dear. I strive to be dependable, honest, and always ready to help.
-          </p>
+          <p className="text-muted-foreground md:text-center text-balance text-center text-[17px] ml-[5px] mr-[5px]">I’m a student, a husband, and a lifelong learner from Brazil. My faith, family shape the way I try to live—honestly, consistently, and with a desire to serve. BYU has become a place where I’m growing, studying, and building a future we’re excited for.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
