@@ -64,7 +64,7 @@ export default function About() {
                  ${isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0'}
               `}>
                  <div className="text-white">
-                    <p className="md:text-lg text-left text-[18px] pt-[40px] pb-[40px]">My wife and I share a life shaped by our faith in Jesus Christ. Our relationship is built on values like honesty, loyalty, kindness, and service, and those principles guide how we treat each other every day. Our faith echoes through every part of our lives, helping us become better and more grounded together.</p>
+                    <p className="md:text-lg text-left text-[18px] pt-[40px] pb-[40px]">My wife and I share a life shaped by our faith in Jesus Christ. Our relationship is built on values like honesty, truth, kindness, and service, and those principles guide how we treat each other every day. Our faith echoes through every part of our lives, helping us become better and more grounded together.</p>
                  </div>
               </div>
             </div>
