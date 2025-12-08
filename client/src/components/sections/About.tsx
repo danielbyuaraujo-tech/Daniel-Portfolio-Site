@@ -89,7 +89,7 @@ export default function About() {
 
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Education</h3>
-                  <p className="text-lg font-medium text-blue-900 dark:text-blue-400 mb-6">Brigham Young University</p>
+                  <p className="font-medium text-blue-900 dark:text-blue-400 mb-6 text-[15px]">Brigham Young University</p>
                   
                   <div className="space-y-4 text-muted-foreground">
                     <div className="flex items-start gap-3">
