@@ -34,7 +34,7 @@ export default function Projects() {
                 />
                 <div>
                     <h3 className="text-3xl font-bold">Themes</h3>
-                    <span className="text-sm font-medium text-muted-foreground">Study Assistant</span>
+                    <span className="text-sm font-medium text-muted-foreground pl-[3px] pr-[3px]">Study Assistant</span>
                 </div>
               </div>
               
