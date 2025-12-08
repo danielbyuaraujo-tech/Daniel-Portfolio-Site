@@ -118,7 +118,7 @@ export default function About() {
 
                 <div className="mt-8 pt-8 border-t border-border">
                   <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider text-muted-foreground">Languages</h4>
-                  <div className="grid grid-cols-3 gap-4 text-center">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                     <div className="p-3 rounded-xl bg-gray-50 dark:bg-zinc-800/50">
                       <span className="block font-bold mb-1">PT</span>
                       <span className="text-[10px] text-muted-foreground uppercase tracking-wider">Native</span>
@@ -126,6 +126,10 @@ export default function About() {
                     <div className="p-3 rounded-xl bg-gray-50 dark:bg-zinc-800/50">
                       <span className="block font-bold mb-1">EN</span>
                       <span className="text-[10px] text-muted-foreground uppercase tracking-wider">Fluent</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-gray-50 dark:bg-zinc-800/50">
+                      <span className="block font-bold mb-1">ES</span>
+                      <span className="text-[10px] text-muted-foreground uppercase tracking-wider">Advanced</span>
                     </div>
                     <div className="p-3 rounded-xl bg-gray-50 dark:bg-zinc-800/50">
                       <span className="block font-bold mb-1">JP</span>
