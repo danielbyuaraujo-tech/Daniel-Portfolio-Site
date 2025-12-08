@@ -39,8 +39,7 @@ export default function Hero() {
             Daniel Araujo
           </h1>
           
-          <p className="md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance md:text-center text-center pl-[0px] pr-[0px] ml-[8px] mr-[8px] text-[16px]">From Brazil to BYU 
-          Growing Through Faith, Family, and Work</p>
+          <p className="md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance md:text-center text-center pl-[0px] pr-[0px] ml-[8px] mr-[8px] text-[16px]">From Brazil to BYU</p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
