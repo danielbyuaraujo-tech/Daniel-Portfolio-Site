@@ -165,7 +165,7 @@ export default function Experience() {
                       exit={{ opacity: 0, height: 0 }}
                       className="overflow-hidden"
                     >
-                      <p className="mt-3 text-gray-400 text-sm leading-relaxed text-justify border-t border-white/10 pt-3">
+                      <p className="mt-3 text-gray-400 text-sm leading-relaxed border-t border-white/10 pt-3 text-left">
                         {item.expandedDescription}
                       </p>
                     </motion.div>
