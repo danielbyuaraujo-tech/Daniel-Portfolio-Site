@@ -1,2 +1,2 @@
 # Daniel-Portfolio-Site
-Repository for https://replit.com/@dfdnzh6cn5/Daniel-Portfolio-Site
+This is my professional Website made in a IS 201 class at BYU.
